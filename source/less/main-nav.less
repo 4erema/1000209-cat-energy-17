@@ -7,16 +7,53 @@
     margin: 0;
 
     .list-site__item {
+      font-family: "Oswald", sans-serif;
       border-bottom: 1px solid  rgb(230, 230, 230);
       text-transform: uppercase;
+      text-align: center;
       font-size: 20px;
       line-height: 20px;
-      font-weight: medium;
+      font-weight: normal;
     }
 
     .list-site__link {
       text-decoration: none;
       color: rgb(0, 0, 0);
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    .list-site {
+      min-width: 480px;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .list-site__item {
+        font-family: @osr;
+        border: none;
+        font-size: 18px;
+        line-height: 25px;
+      }
+
+      .list-site__link--current {
+        border-bottom: 2px solid rgb(104, 183, 56);
+      }
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav {
+    .list-site {
+      .list-site__link {
+        color: rgb(255, 255, 255);
+      }
+
+      .list-site__link--current {
+        border-bottom: 2px solid rgb(255, 255, 255);
+      }
     }
   }
 }

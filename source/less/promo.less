@@ -1,6 +1,12 @@
 .promo {
-  background-image: url("../img/index-background-mobile@1x.jpg");
-  height: 305px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  background-color: rgb(104, 183, 56);
+  background-image: linear-gradient(to top, rgb(255, 255, 255) 182px, transparent 175px), url("../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  align-items: center;
 
   .promo__title {
     font-family: @osr;
@@ -8,6 +14,7 @@
     line-height: 36px;
     color: rgb(255, 255, 255);
     font-weight: normal;
+    text-align: center;
   }
 
   .promo__quote {
@@ -17,19 +24,68 @@
     text-transform: uppercase;
     color: rgb(255, 255, 255);
     font-weight: normal;
+    text-align: center;
   }
 }
 
 .button-green {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  text-align: center;
   font-family: @osr;
   font-size: 14px;
   line-height: 18px;
   color: rgb(255, 255, 255);
-  display: block;
   width: 280px;
   height: 40px;
   text-decoration: none;
   text-transform: uppercase;
   background-color: rgb(104, 183, 56);
   border: none;
+}
+
+@media (min-width: @tablet-width) {
+  .promo {
+    min-height: 840px;
+    padding: 0 30px;
+    background-color: rgb(255, 255, 255);
+    background-image: none;
+    align-items: flex-start;
+    z-index: -3;
+
+    .promo__title {
+      font-size: 60px;
+      line-height: 60px;
+      color: rgb(0, 0, 0);
+      width: 425px;
+      margin-left: 90px;
+      z-index: 100;
+    }
+
+    .promo__quote {
+      font-size: 20px;
+      line-height: 20px;
+      color: rgb(0, 0, 0);
+      margin-left: 90px;
+      z-index: 100;
+    }
+
+    .promo__img {
+      position: absolute;
+      width: 709px;
+      height: 609px;
+      z-index: 0;
+      left: 0;
+      right: 0;
+      top: 300px;
+      margin: auto;
+    }
+
+    .button-green {
+      margin-left: 90px;
+      z-index: 100;
+    }
+  }
 }

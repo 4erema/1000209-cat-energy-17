@@ -1,22 +1,39 @@
 .method {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+
   .method__box {
+    padding: 0 20px;
     background-color: rgb(242, 242, 242);
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  //временно для сеток, вообще думаю этот блок сделать как фон (модификатор) у блока .method__title
+  .method__img {
+    display: none;
   }
 
   .method__title {
+    margin: 40px 0 0 0;
     font-family: @osr;
     font-size: 24px;
     line-height: 37px;
     text-transform: uppercase;
     color: rgb(0, 0, 0);
+    text-align: center;
   }
 
   .method__description {
+    margin: 24px 0 0 0;
     font-family: "Arial", sans-serif;
     font-size: 14px;
     line-height: 18px;
-    color: rgb(0, 0, 0);
+    color: rgb(68, 68, 68);
     border-bottom: 2px solid rgb(230, 230, 230);
+    padding-bottom: 25px;
   }
 
   .method__link {
@@ -25,5 +42,37 @@
     line-height: 16px;
     text-transform: uppercase;
     color: rgb(0, 0, 0);
+    margin: 20px 0 25px 0 ;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .method {
+    padding: 0 30px;
+
+    .method__box {
+      padding-left: 50px;
+    }
+
+    .method__title {
+      text-align: left;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .method {
+    padding: 0 40px;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .method__box {
+      width: 470px;
+      flex-grow: 1;
+    }
+
+    .method__box:nth-child(2){
+      margin-right: 80px;
+    }
   }
 }

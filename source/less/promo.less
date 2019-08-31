@@ -1,12 +1,12 @@
 .promo {
   display: flex;
   flex-direction: column;
-  padding: 0 20px;
   background-color: rgb(104, 183, 56);
   background-image: linear-gradient(to top, rgb(255, 255, 255) 182px, transparent 175px), url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: 50% 0;
   align-items: center;
+  padding: 0 20px;
 
   .promo__title {
     font-family: @osr;
@@ -92,7 +92,9 @@
 
 @media (min-width: @desktop-width) {
   .promo {
-    padding: 0 40px;
+    margin: 0 auto;
+    padding: 0;
+    width: 1220px;
 
     .promo__title {
       text-align: left;

@@ -1,9 +1,13 @@
 .page-header {
-  border-bottom: 1px solid rgb(230, 230, 230);
-  display: flex;
-  flex-direction: column;
-  // временно для удобности
+  // временно для сетки
   background-color: rgba(42, 167, 69, 0.644);
+
+  .page-header__container {
+    width: auto;
+    border-bottom: 1px solid rgb(230, 230, 230);
+    display: flex;
+    flex-direction: column;
+  }
 
   .page-header__wrapper {
     display: flex;
@@ -12,17 +16,19 @@
   }
 }
 
-.page-header__logo-cat-name {
+.logo-cat-name {
   display: none;
 }
 
 @media (min-width: @tablet-width) {
   .page-header {
-    width: auto;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0 30px;
-    border: none;
+    .page-header__container {
+      width: auto;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0 30px;
+      border: none;
+    }
 
     .page-header__button-open {
       display: none;
@@ -35,11 +41,19 @@
     .page-header__wrapper {
       width: 195px;
     }
+
+    .main-nav {
+      align-self: center;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-header {
-    padding: 0 40px;
+    .page-header__container {
+      margin: 0 auto;
+      padding: 0;
+      width: 1220px;
+    }
   }
 }

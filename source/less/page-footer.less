@@ -1,8 +1,11 @@
 .page-footer {
-  padding: 0 20px;
   background-color: rgb(242, 242, 242);
-  display: flex;
-  flex-direction: column;
+
+  .page-footer__container {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+  }
 
   .page-footer__logo {
     align-self: center;
@@ -14,6 +17,7 @@
     list-style: none;
     border-top: 1px solid rgb(217, 217, 217);
     border-bottom: 1px solid rgb(217, 217, 217);
+    align-self: stretch;
   }
 
   .developer__name {
@@ -27,14 +31,21 @@
 
 @media (min-width: @tablet-width) {
   .page-footer {
-    padding: 0 30px;
-    flex-direction: row;
-    justify-content: space-between;
+    .page-footer__container {
+      width: auto;
+      padding: 0 30px;
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-footer {
-    padding: 0 40px;
+    .page-footer__container {
+      width: 1220px;
+      margin: 0 auto;
+      padding: 0;
+    }
   }
 }
